@@ -1,4 +1,4 @@
-bool solve(int lastindex,int currindex,vector<int> stones,vector<vector<int>>& dp)
+bool solve(int lastindex,int currindex,vector<int> stones,vector<vector<int>>& dp)    //since lastjump TLE create krega kuki newjumplen=jumplen(>0)+stones[pos] but stones[pos] ki max value 2^31-1 h or jumplen hmesha >0 hi hoga to newjumplen to 2^31 > INT_MAX (hence will give Memory limit exceed MLE)
 {
     if(currindex==stones.size()-1) return true;
     if(dp[lastindex][currindex]!=-1)  //already exists
