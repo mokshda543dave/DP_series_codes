@@ -3,7 +3,7 @@ bool solve(int lastindex,int currindex,vector<int> stones,vector<vector<int>>& d
     if(currindex==stones.size()-1) return true;
     if(dp[lastindex][currindex]!=-1)  //already exists
    return dp[lastindex][currindex];
-   int jumplen=stones[currindex]-stones[lastindex];
+   int jumplen=stones[currindex]-stones[lastindex];  // phle jumplen or stone[pos] agar same h to further all calls k lie same ans aega to ye dp me lie but jumplen MLE dega but agar last or currindex in stone bhi to mujhe jumplen dedega without any MLE kuki fir dp[n][n] lenge where n=stones.size() to is alag tarike se solve hua ye que  
     for(int j=-1;j<=1;j++)
     {
         int newjumplen=jumplen+j;
